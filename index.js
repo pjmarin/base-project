@@ -27,8 +27,8 @@ const logger = winston.createLogger({
     // - Write all logs with importance level of `error` or less to `error.log`
     // - Write all logs with importance level of `info` or less to `combined.log`
     //
-    new winston.transports.File({ filename: 'error.log', level: 'error',, format: format.combine(format.timestamp(), format.json()) }),
-    new winston.transports.File({ filename: 'combined.log', format: format.combine(format.timestamp(), format.json()) }),
+    new winston.transports.File({ filename: 'error.log', level: 'error', format: winston.format.combine(winston.format.timestamp(), winston.format.json()) }),
+    new winston.transports.File({ filename: 'combined.log', format: winston.format.combine(winston.format.timestamp(), winston.format.json()) })
   ],
 });
 
